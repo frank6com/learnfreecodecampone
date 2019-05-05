@@ -1,3 +1,29 @@
+<!--
+应用视觉设计：使用 CSS 和 HTML 创建更复杂的形状
+世界上最流行的形状非心形莫属了，在本关里你将用纯 CSS 创建一个心形。但是首先你需要了解:before和:after伪类。这些伪类用来在选择元素之前和之后添加一些内容。在下面的例子里，:before伪类元素用来给 class 为heart的元素添加一个正方形。
+
+.heart:before {
+  content: "";
+  background-color: yellow;
+  border-radius: 25%;
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  top: -50px;
+  left: 5px;
+}
+:before和:after必须配合content来使用。这个属性通常用来给元素添加内容诸如图片或者文字。当:before和:after伪类用来添加某些形状而不是图片或文字时，content属性仍然是必需的，但是它的值可以是空字符串。
+
+在上面的例子里，class 为heart元素的:before伪类添加了一个黄色的长方形，长方形的height和width分别为 50px 和 70px。由于设置了其边框半径为 25%，所以长方形为圆角长方形，同时其相对位置为距离left5px，以及向top偏移 50px。
+
+--------------------------------------
+
+把屏幕里的元素变成心形。在heart:after选择器里面，把background-color改成粉色（pink），把border-radius改成 50%。
+
+接下来，在heartclass 选择器（单纯的heart元素）里面，完善transform属性。使用rotate()函数并赋参 -45 度。（rotate()用法和skewX以及skewY类似）。
+
+最后，在heart:before选择器里面，设置content属性为空字符串。
+-->
 <style>
     .heart {
         position: absolute;
