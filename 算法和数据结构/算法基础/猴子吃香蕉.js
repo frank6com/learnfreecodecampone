@@ -9,14 +9,12 @@ function chunkArrayInGroups(arr, size) {
         tempArr = [];
     for(let i=0;i<arr.length;i++){
         tempArr.push(arr[i]);
-        if(tempArr.length === size){
+        if(tempArr.length === size||i==arr.length-1){
             newArr.push(tempArr);
             tempArr = [];
         }
     }
-    if(tempArr.length!=0){
-        newArr.push(tempArr);
-    }
+
     return newArr;
 }
 
